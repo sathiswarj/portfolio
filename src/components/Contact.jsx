@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import { Send, Mail, Phone, MapPin, CheckCircle2, AlertCircle } from 'lucide-react'
 import { SiGithub, SiInstagram } from 'react-icons/si'
 import SectionHeading from './SectionHeading'
@@ -56,12 +57,30 @@ export default function Contact() {
     if (Object.keys(errs).length > 0) return
 
     setStatus('loading')
-    // Simulate async submission
-    await new Promise(r => setTimeout(r, 1800))
-    setStatus('success')
-    setFields({ name: '', email: '', subject: '', message: '' })
-    setTouched({})
-    setTimeout(() => setStatus('idle'), 4000)
+    
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: fields.name,
+          to_name: 'Alex Morgan', // Or your name
+          from_email: fields.email,
+          subject: fields.subject,
+          message: fields.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      
+      setStatus('success')
+      setFields({ name: '', email: '', subject: '', message: '' })
+      setTouched({})
+    } catch (error) {
+      console.error('FAILED...', error)
+      setStatus('error')
+    } finally {
+      setTimeout(() => setStatus('idle'), 4000)
+    }
   }
 
   return (
