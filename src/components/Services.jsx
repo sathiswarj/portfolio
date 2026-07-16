@@ -29,11 +29,7 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))',
-            gap: '1.5rem',
-          }}
+          className="services-grid"
         >
           {services.map((service) => {
             const Icon = service.icon

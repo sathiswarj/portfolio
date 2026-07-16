@@ -343,8 +343,8 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
+          className="scroll-indicator"
           style={{
-            position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)',
             background: 'none', border: 'none', cursor: 'pointer',
             display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem',
             color: 'var(--muted)', fontSize: '0.75rem',

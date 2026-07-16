@@ -65,7 +65,7 @@ html {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 7rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
   }
 }
@@ -77,8 +77,8 @@ html {
   html { font-size: 14px; }
   .section { padding: 5rem 1.25rem; }
   .hero-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 10rem;
+    padding-bottom: 1rem;
   }
   .hero-grid {
     grid-template-columns: 1fr !important;
@@ -99,8 +99,8 @@ html {
   html { font-size: 13px; }
   .section { padding: 4rem 1rem; }
   .hero-section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 9.5rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -133,9 +133,38 @@ code, .mono { font-family: var(--font-mono); }
 ::selection { background: var(--accent-glow); color: var(--accent-light); }
 
 /* ─── Utilities ─────────────────────────────────────── */
-.section       { padding: 7rem 1.5rem; position: relative; }
+.section       { padding: 7rem 1.5rem; position: relative; overflow: hidden; }
 .container     { max-width: 75rem; margin-inline: auto; }
 .container-sm  { max-width: 52rem; margin-inline: auto; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 2rem auto 0;
+  }
+}
 
 /* ─── Gradient Text ─────────────────────────────────── */
 .gradient-text {
