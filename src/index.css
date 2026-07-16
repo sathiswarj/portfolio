@@ -59,6 +59,51 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* ─── Responsive helpers ─────────────────────────────── */
+@media (min-width: 769px) {
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+  .section { padding: 5rem 1.25rem; }
+  .hero-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+    text-align: center;
+  }
+  .hero-grid .btn-primary, .hero-grid .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-grid > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  html { font-size: 13px; }
+  .section { padding: 4rem 1rem; }
+  .hero-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
 body {
   background: var(--bg);
   color: var(--body);

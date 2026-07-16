@@ -31,7 +31,7 @@ export default function Services() {
           viewport={{ once: true, margin: '-50px' }}
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))',
             gap: '1.5rem',
           }}
         >

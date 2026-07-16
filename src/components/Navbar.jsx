@@ -68,7 +68,7 @@ export default function Navbar({ activeSection }) {
               <Code2 size={18} color="#fff" strokeWidth={2.5} />
             </div>
             <span style={{ fontWeight: 800, fontSize: '1.125rem', color: 'var(--heading)', letterSpacing: '-0.02em' }}>
-              Alex<span style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>.</span>
+              Sathiswar<span style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>.</span>
             </span>
           </motion.a>
 

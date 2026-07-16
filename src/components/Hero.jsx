@@ -2,10 +2,11 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download, ChevronDown, Sparkles } from 'lucide-react'
 import { SiGithub, SiInstagram } from 'react-icons/si'
 import { useEffect, useRef, useState } from 'react'
+import { animate, stagger } from 'animejs'
 import { useCountUp } from '../hooks/useCountUp'
 import avatar from '../assets/avatar.png'
 
-const ROLES = ['Full-Stack Developer', 'React Specialist', 'Node.js Engineer', 'UI/UX Enthusiast']
+const ROLES = ['Full-Stack Developer', 'Web & Mobile Developer', 'Node.js Engineer', '']
 
 // const stats = [
 //   { value: 50, suffix: '+', label: 'Projects Done' },
@@ -30,6 +31,29 @@ export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayed, setDisplayed] = useState('')
   const [typing, setTyping] = useState(true)
+
+  // Anime.js animation for floating orbs
+  useEffect(() => {
+    animate('.hero-orb', {
+      translateY: [
+        { value: -30, duration: 2500, easing: 'easeInOutSine' },
+        { value: 30, duration: 3000, easing: 'easeInOutSine' },
+        { value: 0, duration: 2500, easing: 'easeInOutSine' }
+      ],
+      translateX: [
+        { value: 20, duration: 3000, easing: 'easeInOutSine' },
+        { value: -20, duration: 2500, easing: 'easeInOutSine' },
+        { value: 0, duration: 3000, easing: 'easeInOutSine' }
+      ],
+      scale: [
+        { value: 1.1, duration: 2500, easing: 'easeInOutSine' },
+        { value: 0.9, duration: 3000, easing: 'easeInOutSine' },
+        { value: 1, duration: 2500, easing: 'easeInOutSine' }
+      ],
+      loop: true,
+      delay: stagger(200) // Stagger the animation of each orb slightly
+    });
+  }, []);
 
   useEffect(() => {
     const role = ROLES[roleIndex]
@@ -60,22 +84,17 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="section mesh-bg"
+      className="section mesh-bg hero-section"
       style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        paddingTop: '7rem',
-        paddingBottom: '5rem',
         position: 'relative',
         overflow: 'hidden',
         background: 'var(--bg)',
       }}
     >
       {/* Orbs */}
-      <div className="orb orb-blue" style={{ width: 500, height: 500, top: '-10%', right: '-5%' }} />
-      <div className="orb orb-purple" style={{ width: 400, height: 400, bottom: '10%', left: '-8%' }} />
-      <div className="orb orb-cyan" style={{ width: 250, height: 250, top: '60%', right: '20%' }} />
+      <div className="orb orb-blue hero-orb" style={{ width: 500, height: 500, top: '-10%', right: '-5%' }} />
+      <div className="orb orb-purple hero-orb" style={{ width: 400, height: 400, bottom: '10%', left: '-8%' }} />
+      <div className="orb orb-cyan hero-orb" style={{ width: 250, height: 250, top: '60%', right: '20%' }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{

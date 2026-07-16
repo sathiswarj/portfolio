@@ -50,7 +50,7 @@ export const projects = [
       'A full-stack AI-powered application that lets users chat with their documents using Retrieval-Augmented Generation (RAG). Combines local LLMs via Ollama with conversational AI to provide accurate, document-based answers while keeping all data fully local and private.',
     image: aiChat,
     category: 'Full-Stack',
-    tags: ['Python', 'Ollama', 'LangChain', 'RAG', 'React', 'FastAPI'],
+    tags: ['Next.js 15', 'Node.js', 'Express', 'MongoDB', 'Ollama', 'Transformers'],
     liveUrl: 'https://github.com/sathiswarj/AI-Docs-Chat',
     githubUrl: 'https://github.com/sathiswarj/AI-Docs-Chat',
     featured: false,
