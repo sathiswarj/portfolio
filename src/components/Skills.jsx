@@ -41,6 +41,8 @@ export default function Skills() {
           title="What I Bring to the Table"
           highlight="Bring to the Table"
           subtitle="A snapshot of my technical proficiency across the full-stack development landscape."
+          style={{ marginTop: '3rem' }}
+
         />
 
         <div style={{

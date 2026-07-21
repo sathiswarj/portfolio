@@ -2,22 +2,22 @@ import { motion } from 'framer-motion'
 import SectionHeading from './SectionHeading'
 
 const techStack = [
-  { name: 'HTML5',        icon: '🌐', color: '#e34f26', category: 'Frontend' },
-  { name: 'CSS3',         icon: '🎨', color: '#1572b6', category: 'Frontend' },
-  { name: 'JavaScript',   icon: '⚡', color: '#f7df1e', category: 'Frontend' },
-  { name: 'TypeScript',   icon: '🔷', color: '#3178c6', category: 'Frontend' },
-  { name: 'React',        icon: '⚛️', color: '#61dafb', category: 'Frontend' },
-  { name: 'Next.js',      icon: '▲',  color: '#ffffff', category: 'Frontend' },
+  { name: 'HTML5', icon: '🌐', color: '#e34f26', category: 'Frontend' },
+  { name: 'CSS3', icon: '🎨', color: '#1572b6', category: 'Frontend' },
+  { name: 'JavaScript', icon: '⚡', color: '#f7df1e', category: 'Frontend' },
+  { name: 'TypeScript', icon: '🔷', color: '#3178c6', category: 'Frontend' },
+  { name: 'React', icon: '⚛️', color: '#61dafb', category: 'Frontend' },
+  { name: 'Next.js', icon: '▲', color: '#ffffff', category: 'Frontend' },
   { name: 'Tailwind CSS', icon: '🌊', color: '#06b6d4', category: 'Frontend' },
-  { name: 'Node.js',      icon: '🟢', color: '#5fa04e', category: 'Backend' },
-  { name: 'Express',      icon: '🚀', color: '#ffffff', category: 'Backend' },
-  { name: 'MongoDB',      icon: '🍃', color: '#47a248', category: 'Backend' },
-  { name: 'PostgreSQL',   icon: '🐘', color: '#4169e1', category: 'Backend' },
+  { name: 'Node.js', icon: '🟢', color: '#5fa04e', category: 'Backend' },
+  { name: 'Express', icon: '🚀', color: '#ffffff', category: 'Backend' },
+  { name: 'MongoDB', icon: '🍃', color: '#47a248', category: 'Backend' },
+  { name: 'PostgreSQL', icon: '🐘', color: '#4169e1', category: 'Backend' },
   { name: 'React Native', icon: '📱', color: '#61dafb', category: 'Mobile' },
   { name: 'Git & GitHub', icon: '🐙', color: '#f14e32', category: 'Tools' },
-  { name: 'Docker',       icon: '🐳', color: '#2496ed', category: 'Tools' },
-  { name: 'Figma',        icon: '🎭', color: '#f24e1e', category: 'Tools' },
-  { name: 'Framer Motion',icon: '🎬', color: '#bb4b96', category: 'Tools' },
+  { name: 'Docker', icon: '🐳', color: '#2496ed', category: 'Tools' },
+  { name: 'Figma', icon: '🎭', color: '#f24e1e', category: 'Tools' },
+  { name: 'Framer Motion', icon: '🎬', color: '#bb4b96', category: 'Tools' },
 ]
 
 const categories = ['Frontend', 'Backend', 'Mobile', 'Tools']
@@ -41,6 +41,8 @@ export default function TechStack() {
           title="Technologies I Work With"
           highlight="Technologies"
           subtitle="My carefully curated toolkit for building modern, performant, and scalable applications."
+          style={{ marginTop: '3rem' }}
+
         />
 
         {categories.map(cat => (

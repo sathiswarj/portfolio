@@ -21,10 +21,10 @@ function ProjectCard({ project }) {
       variants={cardVariants}
       layout
       className="card"
-      style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
+      style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', maxWidth: '360px', margin: '0 auto', width: '100%' }}
     >
       {/* Image */}
-      <div style={{ position: 'relative', overflow: 'hidden', height: 200 }}>
+      <div style={{ position: 'relative', overflow: 'hidden', height: 180 }}>
         <img
           src={project.image}
           alt={project.title}
@@ -70,7 +70,17 @@ function ProjectCard({ project }) {
       {/* Content */}
       <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
         <h3 style={{ fontSize: '1.0625rem', fontWeight: 700, color: 'var(--heading)', lineHeight: 1.3 }}>{project.title}</h3>
-        <p style={{ fontSize: '0.875rem', color: 'var(--body)', lineHeight: 1.65, flex: 1 }}>{project.description}</p>
+        <p style={{ 
+          fontSize: '0.875rem', 
+          color: 'var(--body)', 
+          lineHeight: 1.65,
+          display: '-webkit-box',
+          WebkitLineClamp: 4,
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden'
+        }}>
+          {project.description}
+        </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.375rem', marginTop: 'auto' }}>
           {project.tags.map(t => <span key={t} className="tag">{t}</span>)}
         </div>
@@ -160,7 +170,7 @@ export default function Projects() {
           animate="visible"
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
             gap: '1.5rem',
           }}
         >

@@ -92,6 +92,7 @@ export default function Contact() {
           title="Let's Work Together"
           highlight="Work Together"
           subtitle="Have a project in mind? I'd love to hear about it. Send me a message and let's build something amazing."
+          style={{ marginBottom: '3rem' }}
         />
 
         <div style={{

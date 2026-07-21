@@ -22,6 +22,8 @@ export default function Services() {
           title="What I Can Do For You"
           highlight="Can Do For You"
           subtitle="From concept to deployment — comprehensive web development services tailored to your needs."
+          style={{ marginTop: '3rem' }}
+
         />
 
         <motion.div
@@ -30,6 +32,7 @@ export default function Services() {
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
           className="services-grid"
+          style={{ marginTop: '3rem' }}
         >
           {services.map((service) => {
             const Icon = service.icon

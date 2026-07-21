@@ -25,8 +25,10 @@ export default function Navbar({ activeSection }) {
 
   const handleNavClick = (href) => {
     setMobileOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    setTimeout(() => {
+      const el = document.querySelector(href)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }, 150)
   }
 
   return (

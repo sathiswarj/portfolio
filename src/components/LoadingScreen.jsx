@@ -30,36 +30,16 @@ export default function LoadingScreen({ onComplete }) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          style={{
-            position: 'fixed',
-            inset: 0,
-            zIndex: 9999,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: 'var(--bg)',
-            gap: '2rem',
-          }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[var(--bg)] gap-8"
         >
           {/* Logo mark */}
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, type: 'spring', stiffness: 200 }}
-            style={{
-              width: 72,
-              height: 72,
-              borderRadius: '1.25rem',
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 0 40px rgba(59,130,246,0.4)',
-              animation: 'pulse-glow 2s ease-in-out infinite',
-            }}
+            className="w-[72px] h-[72px] rounded-[1.25rem] bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shadow-[0_0_40px_rgba(59,130,246,0.4)] animate-[pulse-glow_2s_ease-in-out_infinite]"
           >
-            <span style={{ color: '#fff', fontSize: '1.75rem', fontWeight: 800 }}>A</span>
+            <span className="text-white text-[1.75rem] font-extrabold">S</span>
           </motion.div>
 
           {/* Name */}
@@ -67,12 +47,12 @@ export default function LoadingScreen({ onComplete }) {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.4 }}
-            style={{ textAlign: 'center' }}
+            className="text-center"
           >
-            <p style={{ color: 'var(--heading)', fontWeight: 700, fontSize: '1.25rem', letterSpacing: '-0.02em' }}>
+            <p className="text-[var(--heading)] font-bold text-xl tracking-tight">
               Sathiswar
             </p>
-            <p style={{ color: 'var(--muted)', fontSize: '0.8125rem', marginTop: '0.25rem', fontFamily: 'var(--font-mono)' }}>
+            <p className="text-[var(--muted)] text-[0.8125rem] mt-1 font-mono">
               Full-Stack Developer
             </p>
           </motion.div>
@@ -82,15 +62,15 @@ export default function LoadingScreen({ onComplete }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            style={{ width: 200 }}
+            className="w-[200px]"
           >
             <div className="skill-bar-track">
               <div
-                className="skill-bar-fill"
-                style={{ width: `${Math.min(progress, 100)}%`, transition: 'width 0.1s ease' }}
+                className="skill-bar-fill transition-[width] duration-100 ease-out"
+                style={{ width: `${Math.min(progress, 100)}%` }}
               />
             </div>
-            <p style={{ color: 'var(--muted)', fontSize: '0.75rem', textAlign: 'center', marginTop: '0.5rem', fontFamily: 'var(--font-mono)' }}>
+            <p className="text-[var(--muted)] text-xs text-center mt-2 font-mono">
               {Math.min(Math.round(progress), 100)}%
             </p>
           </motion.div>

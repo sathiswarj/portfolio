@@ -25,7 +25,8 @@ export default function SectionHeading({ label, title, highlight, subtitle, alig
 
   return (
     <motion.div
-      className={`mb-14 ${isCenter ? 'text-center' : ''}`}
+      className={isCenter ? 'text-center' : ''}
+      style={{ marginBottom: '4rem' }}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}

@@ -5,9 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { animate, stagger } from 'animejs'
 import { useCountUp } from '../hooks/useCountUp'
 import avatar from '../assets/avatar.png'
-
-const ROLES = ['Full-Stack Developer', 'Web & Mobile Developer', 'Node.js Engineer', '']
-
+const ROLES = ['Full-Stack Developer', 'Web & Mobile Developer', 'Node.js Engineer', 'Freelancer', '']
 // const stats = [
 //   { value: 50, suffix: '+', label: 'Projects Done' },
 //   { value: 30, suffix: '+', label: 'Happy Clients' },
@@ -111,26 +109,6 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              style={{
-                display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-                padding: '0.375rem 1rem',
-                borderRadius: '999px',
-                background: 'rgba(59,130,246,0.08)',
-                border: '1px solid rgba(59,130,246,0.2)',
-                marginBottom: '1.5rem',
-              }}
-            >
-              <Sparkles size={14} color="#3b82f6" />
-              <span style={{ fontSize: '0.8125rem', color: 'var(--accent-light)', fontWeight: 500 }}>
-                Available for Freelance
-              </span>
-              <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#22c55e', boxShadow: '0 0 8px #22c55e' }} />
-            </motion.div>
 
             {/* Name */}
             <motion.h1
