@@ -78,7 +78,7 @@ html {
   .section { padding: 5rem 1.25rem; }
   .hero-section {
     padding-top: 10rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
   .hero-grid {
     grid-template-columns: 1fr !important;
@@ -100,7 +100,7 @@ html {
   .section { padding: 4rem 1rem; }
   .hero-section {
     padding-top: 9.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
   }
 }
 
