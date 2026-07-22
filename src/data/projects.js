@@ -39,7 +39,7 @@ export const projects = [
     image: restaurant,
     category: 'Frontend',
     tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
-    liveUrl: 'https://lumiere-three-azure.vercel.app/',
+    liveUrl: 'https://lumiere-khaki-eight.vercel.app/',
     githubUrl: 'https://github.com/sathiswarj/restaurant-website',
     featured: true,
   },
