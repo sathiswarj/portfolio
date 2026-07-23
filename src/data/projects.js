@@ -27,7 +27,7 @@ export const projects = [
     image: hospital,
     category: 'Full-Stack',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
-    liveUrl: 'https://nova-clinic-rust.vercel.app/',
+    liveUrl: 'https://nova-clinic-seven.vercel.app/',
     githubUrl: 'https://github.com/sathiswarj/Hospital-appointment',
     featured: true,
   },
