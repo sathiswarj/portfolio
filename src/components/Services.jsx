@@ -1,7 +1,9 @@
+import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
 import SectionHeading from './SectionHeading'
 import { services } from '../data/services'
+import { useDraggableScroll } from '../hooks/useDraggableScroll'
 
 const containerVariants = {
   hidden: {},
@@ -13,6 +15,9 @@ const cardVariants = {
 }
 
 export default function Services() {
+  const scrollRef = useRef(null)
+  useDraggableScroll(scrollRef)
+
   return (
     <section id="services" className="section" style={{ background: 'var(--bg-secondary)' }}>
       <div className="orb orb-cyan" style={{ width: 350, height: 350, top: '10%', left: '-5%', opacity: 0.1 }} />
@@ -33,6 +38,7 @@ export default function Services() {
           viewport={{ once: true, margin: '-50px' }}
           className="services-grid"
           style={{ marginTop: '3rem' }}
+          ref={scrollRef}
         >
           {services.map((service) => {
             const Icon = service.icon

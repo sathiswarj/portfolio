@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import SectionHeading from './SectionHeading'
 import { skillGroups } from '../data/skills'
+import { useDraggableScroll } from '../hooks/useDraggableScroll'
 
 function SkillBar({ name, level, delay }) {
   const ref = useRef(null)
@@ -33,6 +34,9 @@ function SkillBar({ name, level, delay }) {
 }
 
 export default function Skills() {
+  const scrollRef = useRef(null)
+  useDraggableScroll(scrollRef)
+
   return (
     <section id="skills" className="section" style={{ background: 'var(--bg-secondary)' }}>
       <div className="container">
@@ -45,11 +49,7 @@ export default function Skills() {
 
         />
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '2rem',
-        }}>
+        <div className="skills-grid" ref={scrollRef}>
           {skillGroups.map((group, gi) => (
             <motion.div
               key={group.label}

@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react'
 import { SiGithub } from 'react-icons/si'
 import SectionHeading from './SectionHeading'
 import { projects, projectCategories } from '../data/projects'
+import { useDraggableScroll } from '../hooks/useDraggableScroll'
 
 const containerVariants = {
   hidden: {},
@@ -115,6 +116,17 @@ function ProjectCard({ project }) {
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All')
+  const scrollRef = useRef(null)
+  
+  useDraggableScroll(scrollRef)
+
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const { clientWidth } = scrollRef.current
+      const scrollAmount = direction === 'left' ? -clientWidth : clientWidth
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+    }
+  }
 
   const filtered = activeCategory === 'All'
     ? projects
@@ -163,23 +175,32 @@ export default function Projects() {
           ))}
         </motion.div>
 
-        {/* Project grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-            gap: '1.5rem',
-          }}
-        >
-          <AnimatePresence mode="popLayout">
-            {filtered.map(project => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {/* Project grid and buttons wrapper */}
+        <div style={{ position: 'relative' }}>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="projects-grid"
+            ref={scrollRef}
+          >
+            <AnimatePresence mode="popLayout">
+              {filtered.map(project => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+
+          {/* Navigation Buttons */}
+          <div className="projects-nav-buttons">
+            <button onClick={() => scroll('left')} className="left-btn" aria-label="Previous project">
+              <ChevronLeft size={24} />
+            </button>
+            <button onClick={() => scroll('right')} className="right-btn" aria-label="Next project">
+              <ChevronRight size={24} />
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   )

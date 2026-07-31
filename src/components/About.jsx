@@ -76,7 +76,7 @@ export default function About() {
           viewport={{ once: true, margin: '-50px' }}
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
             gap: '1.25rem',
             marginBottom: '4rem',
           }}
@@ -105,7 +105,7 @@ export default function About() {
         </motion.div>
 
         {/* Work Experience section — commented out
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '3rem' }}>
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

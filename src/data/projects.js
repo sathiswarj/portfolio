@@ -25,7 +25,7 @@ export const projects = [
     description:
       'A complete hospital appointment booking platform where patients can search doctors by specialization, book appointments, and manage their healthcare. Features real-time availability and an admin dashboard for clinic management.',
     image: hospital,
-    category: 'Full-Stack',
+    category: 'Frontend',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
     liveUrl: 'https://nova-clinic-seven.vercel.app/',
     githubUrl: 'https://github.com/sathiswarj/Hospital-appointment',
