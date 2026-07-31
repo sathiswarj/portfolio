@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { animate, stagger } from 'animejs'
 import { useCountUp } from '../hooks/useCountUp'
 import avatar from '../assets/avatar.png'
-const ROLES = ['Full-Stack Developer', 'Web & Mobile Developer', 'Node.js Engineer', 'Freelancer', '']
+const ROLES = ['Full-Stack Developer', 'Web & Mobile Developer', 'AI Automation Developer', 'Node.js Engineer', 'Freelancer', '']
 // const stats = [
 //   { value: 50, suffix: '+', label: 'Projects Done' },
 //   { value: 30, suffix: '+', label: 'Happy Clients' },

@@ -4,7 +4,7 @@ import {
   Building2,
   ShoppingCart,
   User,
-  Wrench,
+  Bot,
 } from 'lucide-react'
 
 export const services = [
@@ -53,13 +53,14 @@ export const services = [
     color: '#f59e0b',
     features: ['Unique Design', 'Project Showcase', 'Blog / CMS', 'Contact Integration'],
   },
+
   {
     id: 6,
-    icon: Wrench,
-    title: 'Website Maintenance',
+    icon: Bot,
+    title: 'AI Automation Websites',
     description:
-      'Ongoing support, bug fixes, performance optimizations, security updates, and feature additions for existing websites.',
-    color: '#ef4444',
-    features: ['24/7 Support', 'Performance Audits', 'Security Updates', 'Feature Additions'],
+      'Intelligent web applications integrating AI models and agents to automate business processes, enhance user experience, and drive innovation.',
+    color: '#ec4899',
+    features: ['Chatbots & OpenAI', 'n8n / Make.com', 'Payment Gateways', 'Email / SMS Automation'],
   },
 ]

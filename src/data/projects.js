@@ -53,7 +53,7 @@ export const projects = [
     tags: ['Next.js 15', 'Node.js', 'Express', 'MongoDB', 'Ollama', 'Transformers'],
     liveUrl: 'https://github.com/sathiswarj/AI-Docs-Chat',
     githubUrl: 'https://github.com/sathiswarj/AI-Docs-Chat',
-    featured: false,
+    featured: true,
   },
   {
     id: 5,

@@ -18,9 +18,14 @@ const techStack = [
   { name: 'Docker', icon: '🐳', color: '#2496ed', category: 'Tools' },
   { name: 'Figma', icon: '🎭', color: '#f24e1e', category: 'Tools' },
   { name: 'Framer Motion', icon: '🎬', color: '#bb4b96', category: 'Tools' },
+  { name: 'OpenAI', icon: '🧠', color: '#00a67e', category: 'AI & Automation' },
+  { name: 'n8n', icon: '⚙️', color: '#ff6d5a', category: 'AI & Automation' },
+  { name: 'Make.com', icon: '🔗', color: '#6622ff', category: 'AI & Automation' },
+  { name: 'LangChain', icon: '🦜', color: '#f3c428', category: 'AI & Automation' },
+  { name: 'Chatbots', icon: '🤖', color: '#ec4899', category: 'AI & Automation' },
 ]
 
-const categories = ['Frontend', 'Backend', 'Mobile', 'Tools']
+const categories = ['Frontend', 'Backend', 'AI & Automation', 'Mobile', 'Tools']
 
 const containerVariants = {
   hidden: {},

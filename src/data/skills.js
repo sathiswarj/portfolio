@@ -32,4 +32,16 @@ export const skillGroups = [
       { name: 'Testing (Vitest/Jest)', level: 72 },
     ],
   },
+  {
+    label: 'AI & Automation',
+    skills: [
+      { name: 'Chatbots', level: 92 },
+      { name: 'OpenAI APIs', level: 90 },
+      { name: 'n8n', level: 85 },
+      { name: 'Make.com', level: 88 },
+      { name: 'Payment Gateways', level: 90 },
+      { name: 'Email Automation', level: 95 },
+      { name: 'SMS Services', level: 85 },
+    ],
+  },
 ]
