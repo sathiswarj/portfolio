@@ -1,10 +1,11 @@
-import project1   from '../assets/projects/project1.png'    // ecommerce store
-import hospital   from '../assets/projects/hospital.png'
+import project1 from '../assets/projects/project1.png'    // ecommerce store
+import hospital from '../assets/projects/hospital.png'
 import restaurant from '../assets/projects/restaurant.png'
-import aiChat     from '../assets/projects/ai-chat.png'
-import notion     from '../assets/projects/notion.png'
-import whatsapp   from '../assets/projects/whatsapp.png'
+import aiChat from '../assets/projects/ai-chat.png'
+import notion from '../assets/projects/notion.png'
+import whatsapp from '../assets/projects/whatsapp.png'
 import ecommAdmin from '../assets/projects/project2.png'    // admin dashboard
+import automation from '../assets/projects/project3.png'
 
 export const projects = [
   {
@@ -15,7 +16,6 @@ export const projects = [
     image: project1,
     category: 'Mobile',
     tags: ['React Native', 'Node.js', 'Express', 'MongoDB', 'Cloudinary'],
-    liveUrl: 'https://github.com/sathiswarj/Ecommerce-app',
     githubUrl: 'https://github.com/sathiswarj/Ecommerce-app',
     featured: true,
   },
@@ -51,7 +51,6 @@ export const projects = [
     image: aiChat,
     category: 'Full-Stack',
     tags: ['Next.js 15', 'Node.js', 'Express', 'MongoDB', 'Ollama', 'Transformers'],
-    liveUrl: 'https://github.com/sathiswarj/AI-Docs-Chat',
     githubUrl: 'https://github.com/sathiswarj/AI-Docs-Chat',
     featured: true,
   },
@@ -63,7 +62,6 @@ export const projects = [
     image: notion,
     category: 'Full-Stack',
     tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Socket.io'],
-    liveUrl: 'https://github.com/sathiswarj/task-application',
     githubUrl: 'https://github.com/sathiswarj/task-application',
     featured: false,
   },
@@ -75,7 +73,6 @@ export const projects = [
     image: whatsapp,
     category: 'Mobile',
     tags: ['React Native', 'Node.js', 'Socket.io', 'MongoDB', 'Expo'],
-    liveUrl: 'https://github.com/sathiswarj/Whatsapp-clone',
     githubUrl: 'https://github.com/sathiswarj/Whatsapp-clone',
     featured: false,
   },
@@ -87,9 +84,19 @@ export const projects = [
     image: ecommAdmin,
     category: 'Full-Stack',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Cloudinary', 'JWT'],
-    liveUrl: 'https://github.com/sathiswarj/E-commerce',
     githubUrl: 'https://github.com/sathiswarj/E-commerce',
     featured: false,
+  },
+  {
+    id: 8,
+    title: 'Event Management System — MERN & n8n',
+    description:
+      'A full-stack Event Management System built with the MERN stack and n8n automation for event requests, approval workflows, status tracking, and automated email notifications.',
+    image: automation,
+    category: 'Full-Stack',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'n8n', 'Email Automation', 'Telegram'],
+    githubUrl: 'https://github.com/sathiswarj/event-management',
+    featured: true,
   },
 ]
 

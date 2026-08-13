@@ -82,17 +82,22 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="section mesh-bg hero-section"
+      className="section hero-section"
       style={{
         position: 'relative',
         overflow: 'hidden',
         background: 'var(--bg)',
       }}
     >
+      {/* Premium Animated Grid Background */}
+      <div className="premium-grid-container">
+        <div className="premium-grid" />
+      </div>
+
       {/* Orbs */}
-      <div className="orb orb-blue hero-orb" style={{ width: 500, height: 500, top: '-10%', right: '-5%' }} />
-      <div className="orb orb-purple hero-orb" style={{ width: 400, height: 400, bottom: '10%', left: '-8%' }} />
-      <div className="orb orb-cyan hero-orb" style={{ width: 250, height: 250, top: '60%', right: '20%' }} />
+      <div className="orb orb-blue hero-orb" style={{ width: 500, height: 500, top: '-10%', right: '-5%', opacity: 0.2 }} />
+      <div className="orb orb-purple hero-orb" style={{ width: 400, height: 400, bottom: '10%', left: '-8%', opacity: 0.15 }} />
+      <div className="orb orb-cyan hero-orb" style={{ width: 250, height: 250, top: '60%', right: '20%', opacity: 0.2 }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{
@@ -115,10 +120,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.08, marginBottom: '0.5rem' }}
+              style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: '0.75rem' }}
             >
               Hi, I&apos;m{' '}
-              <span className="gradient-text">Sathiswar</span>
+              <span className="shimmer-text">Sathiswar</span>
             </motion.h1>
 
             {/* Typing role */}
@@ -151,8 +156,7 @@ export default function Hero() {
                 lineHeight: 1.8,
               }}
             >
-              I craft <strong style={{ color: 'var(--heading)' }}>beautiful, fast, and scalable</strong> web applications
-              that users love. From pixel-perfect frontends to robust backends — I&apos;ve got you covered.
+              I craft <strong style={{ color: 'var(--heading)' }}>beautiful, fast, and scalable</strong> web applications, mobile apps, and AI automation workflows. From pixel-perfect frontends to intelligent backend automation — I've got you covered for your next freelance project.
             </motion.p>
 
             {/* CTAs */}

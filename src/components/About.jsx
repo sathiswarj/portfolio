@@ -65,7 +65,7 @@ export default function About() {
           label="About Me"
           title="Crafting Digital Experiences"
           highlight="Digital Experiences"
-          subtitle="I'm a full-stack & AI automation developer with 2.5+ years of experience building intelligent products that live on the web. I specialize in integrating LLMs, creating custom chatbots, and automating workflows."
+          subtitle="I'm a freelance full-stack developer with 2.5+ years of experience building web applications, mobile apps, and intelligent AI automations. I specialize in delivering high-quality, scalable solutions tailored for my clients' unique needs."
         />
 
         {/* Highlights */}

@@ -419,22 +419,56 @@ code, .mono { font-family: var(--font-mono); }
 
 [data-theme="light"] .orb { opacity: 0.07; }
 
-/* ─── Mesh Grid Bg ──────────────────────────────────── */
-.mesh-bg {
-  background-image:
-    linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* ─── Noise texture ─────────────────────────────────── */
-.noise::after {
-  content: '';
+/* ─── Premium Animated Grid ─────────────────────────── */
+.premium-grid-container {
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
+  overflow: hidden;
   z-index: 0;
+  perspective: 1000px;
+}
+
+.premium-grid {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0%;
+  left: -50%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: rotateX(75deg) translateY(0) translateZ(-200px);
+  animation: gridMove 15s linear infinite;
+  mask-image: linear-gradient(to top, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 60%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 60%);
+  pointer-events: none;
+}
+
+[data-theme="light"] .premium-grid {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+@keyframes gridMove {
+  0% { transform: rotateX(75deg) translateY(0) translateZ(-200px); }
+  100% { transform: rotateX(75deg) translateY(60px) translateZ(-200px); }
+}
+
+.shimmer-text {
+  background: linear-gradient(110deg, #3b82f6 0%, #a78bfa 25%, #06b6d4 50%, #3b82f6 75%, #a78bfa 100%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  to { background-position: 200% center; }
 }
 
 /* ─── Form ──────────────────────────────────────────── */

@@ -74,11 +74,7 @@ function ProjectCard({ project }) {
         <p style={{ 
           fontSize: '0.875rem', 
           color: 'var(--body)', 
-          lineHeight: 1.65,
-          display: '-webkit-box',
-          WebkitLineClamp: 4,
-          WebkitBoxOrient: 'vertical',
-          overflow: 'hidden'
+          lineHeight: 1.65
         }}>
           {project.description}
         </p>

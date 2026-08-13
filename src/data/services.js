@@ -3,7 +3,7 @@ import {
   Layers,
   Building2,
   ShoppingCart,
-  User,
+  Smartphone,
   Bot,
 } from 'lucide-react'
 
@@ -46,12 +46,12 @@ export const services = [
   },
   {
     id: 5,
-    icon: User,
-    title: 'Portfolio Websites',
+    icon: Smartphone,
+    title: 'Mobile Applications',
     description:
-      'Stunning personal portfolio websites that showcase your work and help you stand out to potential clients or employers.',
+      'High-performance, cross-platform mobile apps built with React Native for iOS and Android, providing a native feel and seamless user experience.',
     color: '#f59e0b',
-    features: ['Unique Design', 'Project Showcase', 'Blog / CMS', 'Contact Integration'],
+    features: ['React Native / Expo', 'iOS & Android', 'Push Notifications', 'App Store Deployment'],
   },
 
   {
